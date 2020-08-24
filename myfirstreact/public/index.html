@@ -1,43 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <title>Niaz Rooz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header class="fixed-top back">
+        <div class="row border pt-2">
+            <div class="col-4">
+                <div class="mt-2 d-flex">
+                  <div class="mt1">
+                  <a class="px-2 py-2 mx-2 a3 btn1" href="#">درج آگهی رایگان</a>
+                  </div>
+                  <div class="border-1 py-1">
+                    <a class="a-1" href="#">
+                      <img class="w_icon mb-1" src="../img/s.png" />
+                    </a>
+                    <input class="rtl input-1" type="text" placeholder="جستجو">
+                  </div>
+                </div>
+            </div>
+            <div class="col-6">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+                <nav class="navbar navbar-expand p-0 rtl">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+                    <ul class="navbar-nav">
+                      <li class="nav-item p-2">
+                        <a class="nav-link a1" href="#">
+                          <img class="w_icon mb-1" src="../img/p.png" />
+                          <span>پنل کاربری</span>
+                        </a>
+                      </li>
+                      <li class="nav-item p-2">
+                        <a class="nav-link a1" href="#">
+                          <img class="w_icon mb-1" src="../img/m.png" />
+                          <span>انتخاب شهر</span>
+                        </a>
+                      </li>
+                      <li class="nav-item p-2">
+                        <a class="nav-link a1" href="#">
+                          <img class="w_icon mb-1" src="../img/w.png" />
+                          <span>انتخاب گروه</span>
+                        </a>
+                      </li>
+                    </ul>
+                  
+                  </nav>
+
+            </div>
+            <div class="col-2 d-flex flex-row-reverse">
+                <img id="img1" class="mr-1" src="../img/logo.jpg" />
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+      <div>
+        <div class="rtl">
+          <div class="fsize">
+            <div class="left">
+              <div id="accordion">
+  
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link a2" data-toggle="collapse" href="#collapseOne">
+                      گروه های اصلی
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="collapse show">
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">صنعت</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">کشاورزی و دامداری</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">پزشکی و سلامت</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بازرگانی</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">خدمات مسافرتی</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">خدمات ساختمانی</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">خدمات</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">املاک</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">کار و ایتخدام</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">آموزش</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">لوازم</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">کامپیوتر</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">موبایل</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">وسیله نقلیه</a>
+                    </div>
+                    <div class="card-body px-1 py-1 pb-3">
+                      <a class="a3" href="#">حیوانات خانگی</a>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link a2" data-toggle="collapse" href="#collapseTwo">
+                      گروه های منتخب
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="collapse">
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">خرید وفروش ویلا</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">خرید و فروش آپارتمان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">زمین</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">باغ ویلا</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">خرید و فروش خانه</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بذر صیفی جات</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#"></a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">دوربین مدار بسته</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">پوشاک زنانه</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">رهن و اجاره آپارتمان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بسته بندی و حمل اثاثیه</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">ثبت و رتبه بندی شرکت ها</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">تلویزیون</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">آموزش دروس</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">هدایای تبلیغاتی</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">پایان نامه ، پروژه ، مقاله</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">آپارتمان مبله</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">خدمات چاپ و صحافی</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">تجهیزات پرورش طیور</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">خرید و فروش مغازه</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">فروشگاه لوازم یدکی</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">تخم طیور</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">ترخیص کالا</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">کولر و اسپلیت</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">طراحی سایت و اپیکیشن</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">استخدام بازرگانی تجاری</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">سایر مواد شیمیایی جامد</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">کار در منزل</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">اتوماسیون صنعتی</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">استخدام اداری و مالی</a>
+                    </div>
+                    <div class="card-body px-1 py-1 pb-3">
+                      <a class="a3" href="#">کلاس و امکانات آموزشی</a>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link a2" data-toggle="collapse" href="#collapseThree">
+                      شهر های پر طرفدار
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">تهران</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">اصفهان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">مشهد</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">کرج</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">تبریز</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">رشت</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">شیراز</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">شهری</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">سرخرود</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">قم</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بندرانزلی</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">ارومیه</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">محمود آباد</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">اهواز</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">ساری</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">اندیمشک</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">کرمان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">قزوین</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">یزد</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بابلسر</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">تجریش</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">اراک</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">نوشهر</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">آمل</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">اسلام شهر</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بانه</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">ملارد</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">پردیس</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">لواسان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">لاهیجان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">کرمانشاه</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">اردبیل</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">زنجان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">همدان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">گرگان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بندرعباس</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">سنندج</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بوشهر</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بیرجند</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">سمنان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">زاهدان</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">خرم آباد</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">بجنورد</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">شهرکرد</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">یاسوج</a>
+                    </div>
+                    <div class="card-body px-1 py-1">
+                      <a class="a3" href="#">ایلام</a>
+                    </div>
+                    <div class="card-body px-1 py-1 pb-3">
+                      <a class="a3" href="#">سایر شهرها</a>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="agahi">
+                <h4>نیازمندیها ، آگهی و تبلیغات اینترنتی</h4>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+      <div class="page d-flex justify-content-center">
+        <ul class="pagination rtl">
+          <li class="page-item page-p mx-2"><a id="c-1" class="page-link" href="#">صفحه قبل</a></li>
+          <li class="page-item page-p"><a id="c-2" class="page-link" href="#">1</a></li>
+          <li class="page-item page-p"><a id="c-2" class="page-link" href="#">2</a></li>
+          <li class="page-item page-p"><a id="c-2" class="page-link" href="#">3</a></li>
+          <li class="page-item page-p"><a id="c-2" class="page-link" href="#">4</a></li>
+          <li class="page-item page-p"><a id="c-2" class="page-link" href="#">5</a></li>
+          <li class="page-item page-p mx-2"><a id="c-1" class="page-link" href="#">صفحه بعد</a></li>
+        </ul>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="footer rtl">
+        <p>مسئولیت آگهی ها بر عهده آگهی دهندگان می باشد. فعالیت های این سایت تابع قوانین و مقررات جمهوری اسلامی ایران است.</p>
+      </div>
+    </footer>
+</body>
 </html>
