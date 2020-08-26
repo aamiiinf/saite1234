@@ -9,15 +9,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="./js/app.js"></script>
+  <script src="/node_modules/angular/angular.js"></script>
 </head>
-<body>
 
-    <header class="fixed-top back">
-        <div class="row border pt-2">
-            <div class="col-4">
+<body>
+    <header class="fixed-top  back">
+        <div class="d-flex justify-content-between pt-2 pb-2">
+            <div class="">
                 <div class="mt-2 d-flex">
                   <div class="mt1">
-                  <a class="px-2 py-2 mx-2 a3 btn1" href="#">درج آگهی رایگان</a>
+                  <a class="btn1" href="#">درج آگهی رایگان</a>
+                  <a class="btn2" href="#">آگهی رایگان</a>
+                  <a class="btn3" href="#"><i style='font-size:24px' class='fas'>&#xf067;</i></a>
                   </div>
                   <div class="border-1 py-1">
                     <a class="a-1" href="#">
@@ -27,36 +32,35 @@
                   </div>
                 </div>
             </div>
-            <div class="col-6">
-
-                <nav class="navbar navbar-expand p-0 rtl">
-
-                    <ul class="navbar-nav">
-                      <li class="nav-item p-2">
-                        <a class="nav-link a1" href="#">
-                          <img class="w_icon mb-1" src="../img/p.png" />
-                          <span>پنل کاربری</span>
-                        </a>
-                      </li>
-                      <li class="nav-item p-2">
-                        <a class="nav-link a1" href="#">
-                          <img class="w_icon mb-1" src="../img/m.png" />
-                          <span>انتخاب شهر</span>
-                        </a>
-                      </li>
-                      <li class="nav-item p-2">
-                        <a class="nav-link a1" href="#">
-                          <img class="w_icon mb-1" src="../img/w.png" />
-                          <span>انتخاب گروه</span>
-                        </a>
-                      </li>
-                    </ul>
-                  
-                  </nav>
-
+            <div class="md_2">  
+              <div class="d-flex">
+                <div class="flex-fill mt-2">
+                  <a class="nav-link a1" href="#">
+                    <span>انتخاب شهر</span>
+                    <img class="w_icon mb-1" src="../img/m.png" />
+                  </a>
+                </div>
+                <div class="flex-fill mt-2">
+                  <a class="nav-link a1" href="#">
+                    <span>انتخاب گروه</span>
+                    <img class="w_icon mb-1" src="../img/w.png" />
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="col-2 d-flex flex-row-reverse">
-                <img id="img1" class="mr-1" src="../img/logo.jpg" />
+                <div class="mt-2 mr-5 d-1">
+                  <a class="nav-link a1" href="#">
+                    <span>پنل کاربری</span>
+                    <img class="w_icon mb-1" src="../img/p.png" />
+                  </a>
+                </div>
+            <div class="">  
+              <div class="d-flex flex-row-reverse">
+                <div class="flex-fill">
+                  <img id="img1" class="mr-1" src="../img/logo.jpg" />
+                </div>
+                
+              </div>
             </div>
         </div>
     </header>
@@ -382,22 +386,27 @@
             </div>
           </div>
           <div class="right">
-            <div class="agahi">
-                <h4>نیازمندیها ، آگهی و تبلیغات اینترنتی</h4>
+            <div class="clearfix">
+                <h4 class="float-right">نیازمندیها ، آگهی و تبلیغات اینترنتی</h4>
+                <div class="float-left">
+                  <a class="a-5 p-1" href="#"><i style='font-size:24px' class='fas'>&#xf0c9;</i></a>
+                  <a class="a-5 p-1" href="#"><i style='font-size:24px' class='fas'>&#xf00a;</i></a>
+                </div>
             </div>
-  
           </div>
         </div>
-      </div>
+      </div> 
       <div class="page d-flex justify-content-center">
         <ul class="pagination rtl">
           <li class="page-item page-p mx-2"><a id="c-1" class="page-link" href="#">صفحه قبل</a></li>
+          <li class="page-item page-p mx-2"><a id="c-1-1" class="page-link" href="#">قبل</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">1</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">2</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">3</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">4</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">5</a></li>
           <li class="page-item page-p mx-2"><a id="c-1" class="page-link" href="#">صفحه بعد</a></li>
+          <li class="page-item page-p mx-2"><a id="c-1-1" class="page-link" href="#">بعد</a></li>
         </ul>
       </div>
     </main>
@@ -406,6 +415,9 @@
       <div class="footer rtl">
         <p>مسئولیت آگهی ها بر عهده آگهی دهندگان می باشد. فعالیت های این سایت تابع قوانین و مقررات جمهوری اسلامی ایران است.</p>
       </div>
+     
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 </body>
 </html>

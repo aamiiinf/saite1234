@@ -1,9 +1,6 @@
 .rtl{
     direction: rtl;
 }
-.border{
-    border-bottom: 1px solid black;
-}
 .main{
     background-color: #f1f1f1;
     margin-top: 68px;
@@ -12,15 +9,14 @@
     border: 1px solid rgb(175, 175, 175);
     max-width: 100%;
 }
-.agahi{
-    text-align: right;
-}
 .img{
     width: 280px;
     height: 200px;
 }
 .back{
     background-color: #f6f6f6;
+    height: 70px;
+    border-bottom: 1px solid rgb(179, 178, 178);
 }
 #img1{
     width: 128px;
@@ -30,6 +26,7 @@
 .a1{
     font-size: 15px;
     color: dimgrey;
+    text-align: center;
 }
 .a1:hover{
     color: black;
@@ -53,7 +50,11 @@
 .a2:hover{
     color: black;
 }
-.a3:hover{
+.btn1:hover{
+    text-decoration: none;
+    color: white;
+}
+.btn2:hover{
     text-decoration: none;
     color: white;
 }
@@ -70,6 +71,15 @@
 .btn1{
     background-color: rgb(247, 148, 29);
     color: white;
+    padding: 8px;
+}
+.btn2{
+    background-color: rgb(247, 148, 29);
+    color: white;
+    padding: 8px;   
+}
+.btn3{
+    color: #000;
 }
 .input-1{
     border: 0;
@@ -105,6 +115,12 @@ h4{
     font-size: 16px;
     font-family: sans-serif;
 }
+#c-1-1{  
+    background-color: #4582ec;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+}
 #c-2{
     color: dimgray;
 }
@@ -112,4 +128,68 @@ h4{
     border-top: 1px solid dimgray;
     text-align: right;
     padding: 25px;
+    background-color: darkcyan;
 }
+.a-5{
+    color: rgb(201, 201, 201);
+}
+.a-5:hover{
+    color: rgb(201, 201, 201);
+}
+
+  @media only screen and (min-width: 1115px) {
+    .btn2{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 1115px) {
+    .btn1{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 1020px) {
+    .footer{
+        background-color: darkgoldenrod;
+    }
+    .btn2{
+        padding: 13px 0px 10px;
+        font-size: 11px;
+    }
+  }
+  @media only screen and (min-width: 960px) {
+      .btn3{
+          display: none;
+      }
+  }
+  @media only screen and (max-width: 960px) {
+    .btn2{
+        display: none;
+    }
+    .fsize{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    .md_2{
+        display: none;
+    }
+    .a1{
+        text-align: right;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    #c-1{
+        display: none;
+    }
+  }
+  @media only screen and (min-width: 550px) {
+    #c-1-1{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 580px) {
+      .d-1{
+          display: none;
+      }
+  }
