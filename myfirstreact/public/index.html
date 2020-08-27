@@ -10,19 +10,41 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <script src="./js/app.js"></script>
-  <script src="/node_modules/angular/angular.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+$scope.myc1 = function() {
+ $scope.myObj = {
+    "color" : "white",
+    "background-color" : "coral",
+    "font-size" : "60px",
+    "padding" : "50px"
+  }
+}
+$scope.myc2 = function() {
+ $scope.myObj = {
+    "color" : "white",
+    "background-color" : "blue",
+    "font-size" : "60px",
+    "padding" : "50px"
+  }
+}
+ 
+});
+    </script>
 </head>
 
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
     <header class="fixed-top  back">
         <div class="d-flex justify-content-between pt-2 pb-2">
             <div class="">
                 <div class="mt-2 d-flex">
                   <div class="mt1">
-                  <a class="btn1" href="#">درج آگهی رایگان</a>
-                  <a class="btn2" href="#">آگهی رایگان</a>
-                  <a class="btn3" href="#"><i style='font-size:24px' class='fas'>&#xf067;</i></a>
+                  <a class="btn1" ng-click="myFunc()" href="./html/worod.html">درج آگهی رایگان</a>
+                  <a class="btn2" ng-click="myFunc()" href="./html/worod.html">آگهی رایگان</a>
+                  <a class="btn3" ng-click="myFunc()" href="./html/worod.html"><i style='font-size:24px' class='fas'>&#xf067;</i></a>
                   </div>
                   <div class="border-1 py-1">
                     <a class="a-1" href="#">
@@ -48,10 +70,10 @@
                 </div>
               </div>
             </div>
-                <div class="mt-2 mr-5 d-1">
+                <div class="d-1">
                   <a class="nav-link a1" href="#">
                     <span>پنل کاربری</span>
-                    <img class="w_icon mb-1" src="../img/p.png" />
+                    <img class="w_icon mb-1 a1" src="../img/p.png" />
                   </a>
                 </div>
             <div class="">  
@@ -389,10 +411,14 @@
             <div class="clearfix">
                 <h4 class="float-right">نیازمندیها ، آگهی و تبلیغات اینترنتی</h4>
                 <div class="float-left">
-                  <a class="a-5 p-1" href="#"><i style='font-size:24px' class='fas'>&#xf0c9;</i></a>
-                  <a class="a-5 p-1" href="#"><i style='font-size:24px' class='fas'>&#xf00a;</i></a>
+                  <a class="a-5 p-1" ng-click="myc1()" href="#"><i style='font-size:24px' class='fas'>&#xf0c9;</i></a>
+                  <a class="a-5 p-1" ng-click="myc2()" href="#"><i style='font-size:24px' class='fas'>&#xf00a;</i></a>
                 </div>
             </div>
+            <div class="container-1">
+              <h1 ng-style="myObj">Welcome</h1>
+            </div>
+         
           </div>
         </div>
       </div> 
@@ -417,7 +443,6 @@
       </div>
      
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
 </body>
 </html>

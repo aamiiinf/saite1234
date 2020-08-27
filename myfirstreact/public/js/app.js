@@ -1,10 +1,14 @@
-var app = angular.module("myApp", ["ngRoute"]);
-app.config(function($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "./js/page-1.html"
-    })
-    .when("/page2", {
-        templateUrl : "./js/page-2.html"
-    })
-});
+$(document).ready(function(){
+    $(".btn1,.btn2, .btn3").click(function(){
+      $.get('/worod', function(){
+        $("body").load('worod.html')
+      });
+    });
+  });
+  $(document).ready(function(){
+    $("button").click(function(){
+      $.get('/sand', function(){
+          alert(' ثبت نام با موفقیت  انجام شد ')
+      });
+    });
+  });
