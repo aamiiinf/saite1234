@@ -4,11 +4,21 @@ $(document).ready(function(){
         $("body").load('worod.html')
       });
     });
-  });
-  $(document).ready(function(){
-    $("button").click(function(){
-      $.get('/sand', function(){
-          alert(' ثبت نام با موفقیت  انجام شد ')
-      });
+
+    $("#btn2").click(function(){
+      $(".ol").append("<li><h2>1</h2><p>2</p><p>3</p><p>4</p></li>");
+    });
+
+    $("#btn1").click(function(){
+        $.post('/login', {
+            password : $("#password").val(),
+            username : $("#username").val()
+        },function(data){
+          if (data.msg) {
+            alert(data.msg)
+          }else{
+            $("body").load('../index.html')
+          }
+        });
     });
   });

@@ -37,14 +37,14 @@ $scope.myc2 = function() {
 </head>
 
 <body ng-app="myApp" ng-controller="myCtrl">
-    <header class="fixed-top  back">
-        <div class="d-flex justify-content-between pt-2 pb-2">
+    <header class="fixed-top back">
+        <div class="d-flex justify-content-between">
             <div class="">
-                <div class="mt-2 d-flex">
+                <div class="d-flex">
                   <div class="mt1">
-                  <a class="btn1" ng-click="myFunc()" href="./html/worod.html">درج آگهی رایگان</a>
-                  <a class="btn2" ng-click="myFunc()" href="./html/worod.html">آگهی رایگان</a>
-                  <a class="btn3" ng-click="myFunc()" href="./html/worod.html"><i style='font-size:24px' class='fas'>&#xf067;</i></a>
+                  <a id="btn2" class="btn1" href="#">درج آگهی رایگان</a>
+                  <a class="btn2" href="#">آگهی رایگان</a>
+                  <a class="btn3" href="#"><i style='font-size:24px' class='fas'>&#xf067;</i></a>
                   </div>
                   <div class="border-1 py-1">
                     <a class="a-1" href="#">
@@ -83,7 +83,11 @@ $scope.myc2 = function() {
                 </div>
                 
               </div>
-            </div>
+            </div>   
+        </div>
+        
+        <div class="div-2">
+          <p>a</p>
         </div>
     </header>
 
@@ -150,7 +154,7 @@ $scope.myc2 = function() {
                 </div>
               
                 <div class="card">
-                  <div class="card-header">
+                  <div class="card-header card-d">
                     <a class="collapsed card-link a2" data-toggle="collapse" href="#collapseTwo">
                       گروه های منتخب
                     </a>
@@ -253,7 +257,7 @@ $scope.myc2 = function() {
                 </div>
               
                 <div class="card">
-                  <div class="card-header">
+                  <div class="card-header card-d">
                     <a class="collapsed card-link a2" data-toggle="collapse" href="#collapseThree">
                       شهر های پر طرفدار
                     </a>
@@ -415,8 +419,12 @@ $scope.myc2 = function() {
                   <a class="a-5 p-1" ng-click="myc2()" href="#"><i style='font-size:24px' class='fas'>&#xf00a;</i></a>
                 </div>
             </div>
-            <div class="container-1">
-              <h1 ng-style="myObj">Welcome</h1>
+            <div>
+              <ul class="ol" ng-style="myObj">
+                <li>
+                  <p>amin</p>
+                </li>
+              </ul>
             </div>
          
           </div>

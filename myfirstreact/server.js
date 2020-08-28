@@ -1,19 +1,19 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-//const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const session = require('express-session') ;
 const app = express() ;
 const path = require('path');
 
-// mongoose.connect("mongodb://localhost/chat113") ;
+mongoose.connect("mongodb://localhost/niazrooz") ;
 
-// const Schema = mongoose.Schema;
-// var userSchema = new Schema({
-//     username : String ,
-//     password : String
-// }) ;
-// var snapModel543 = mongoose.model("User" , userSchema ) ;
+const Schema = mongoose.Schema;
+var userSchema = new Schema({
+   username : String ,
+   password : String
+}) ;
+var niazrooz = mongoose.model("User" , userSchema ) ;
 
 app.use(morgan('common')) ;
 app.use(express.static(path.join(__dirname, 'public')))
@@ -33,9 +33,36 @@ app.get('/worod', function (req, res, next) {
     res.sendFile(__dirname + '/html/worod.html');
     console.log('Page redirected to page worod.html');
 });
-app.get('/sand', function () {
-    res.sendFile(__dirname + '/public/index.html');
+app.post('/login', function (req, res, next) {
+    console.log(req.body);
+    var formData = req.body;
+    var password = formData.password;
+    var username = formData.username;
+    if (password.length && username.length) {
+        if (password.length >= 4) {
+         snapModel543.find({username}, function (err, docs) {
+             if (err) {throw err}
+             else if(docs.length){
+                 res.json({msg :'user ghablan sabt shode'})
+             }else{
+                 var newUser = new niazrooz({
+                     password : formData.password ,
+                     username : formData.username
+                 }) ;
+                 newUser.save() ;
+                 console.log(newUser);
+                 res.sendFile(__dirname + '/public/index.html');
+             }
+           });
+        }else{
+            res.json({msg : 'password bayad 4 ta bashad'})
+        }
+    }else{
+        res.json({msg :'lotfan hame mavared ra kamel konid'})
+    }
+  
+    
 })
 
 app.listen(3000);
-console.log("app running on port 3000") ;
+console.log("app running at port 3000") ;
