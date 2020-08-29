@@ -30,7 +30,7 @@ app.get('/', function (req, res, next) {
     res.sendFile(__dirname + '/public/index.html');
 });
 app.get('/worod', function (req, res, next) {
-    res.sendFile(__dirname + '/html/worod.html');
+    res.sendFile(__dirname + '/public/html/worod.html');
     console.log('Page redirected to page worod.html');
 });
 app.post('/login', function (req, res, next) {
@@ -40,7 +40,7 @@ app.post('/login', function (req, res, next) {
     var username = formData.username;
     if (password.length && username.length) {
         if (password.length >= 4) {
-         snapModel543.find({username}, function (err, docs) {
+         niazrooz.find({username}, function (err, docs) {
              if (err) {throw err}
              else if(docs.length){
                  res.json({msg :'user ghablan sabt shode'})
@@ -51,7 +51,8 @@ app.post('/login', function (req, res, next) {
                  }) ;
                  newUser.save() ;
                  console.log(newUser);
-                 res.sendFile(__dirname + '/public/index.html');
+                res.json({msg : 'sabte nam ba mofaghiat anjam shod'});
+                res.sendFile(__dirname + '/public/html/darg.html');
              }
            });
         }else{
@@ -59,10 +60,12 @@ app.post('/login', function (req, res, next) {
         }
     }else{
         res.json({msg :'lotfan hame mavared ra kamel konid'})
-    }
-  
+    } 
+});
+app.post('/darg', function(req, res){
+    console.log(req.body);
     
-})
+});
 
 app.listen(3000);
 console.log("app running at port 3000") ;

@@ -11,38 +11,32 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <script src="/js/app.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script>
-var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope) {
-$scope.myc1 = function() {
- $scope.myObj = {
-    "color" : "white",
-    "background-color" : "coral",
-    "font-size" : "60px",
-    "padding" : "50px"
-  }
-}
-$scope.myc2 = function() {
- $scope.myObj = {
-    "color" : "white",
-    "background-color" : "blue",
-    "font-size" : "60px",
-    "padding" : "50px"
-  }
-}
- 
-});
-    </script>
 </head>
-
-<body ng-app="myApp" ng-controller="myCtrl">
+<script>
+  $(document).ready(function(){
+    $(window).load(function(){
+     $(".intro > ul > li").addClass('amin')
+    });
+  });
+  
+  // $(document).ready(function(){
+  //   $("#btn_1").click(function(){
+  //     $(".intro ul li").removeClass("intro2").addClass("intro");
+  //   });
+  
+  
+  //   $("#btn_2").click(function(){
+  //     $(".intro ul li").removeClass("intro").addClass("intro2");
+  //   });
+  // });
+  </script>
+<body>
     <header class="fixed-top back">
         <div class="d-flex justify-content-between">
             <div class="">
                 <div class="d-flex">
                   <div class="mt1">
-                  <a id="btn2" class="btn1" href="#">درج آگهی رایگان</a>
+                  <a class="btn1" href="#">درج آگهی رایگان</a>
                   <a class="btn2" href="#">آگهی رایگان</a>
                   <a class="btn3" href="#"><i style='font-size:24px' class='fas'>&#xf067;</i></a>
                   </div>
@@ -87,7 +81,7 @@ $scope.myc2 = function() {
         </div>
         
         <div class="div-2">
-          <p>a</p>
+       
         </div>
     </header>
 
@@ -415,21 +409,48 @@ $scope.myc2 = function() {
             <div class="clearfix">
                 <h4 class="float-right">نیازمندیها ، آگهی و تبلیغات اینترنتی</h4>
                 <div class="float-left">
-                  <a class="a-5 p-1" ng-click="myc1()" href="#"><i style='font-size:24px' class='fas'>&#xf0c9;</i></a>
-                  <a class="a-5 p-1" ng-click="myc2()" href="#"><i style='font-size:24px' class='fas'>&#xf00a;</i></a>
+                  <a id="btn_1" class="a-5 p-1" href="#"><i style='font-size:24px' class='fas'>&#xf0c9;</i></a>
+                  <a id="btn_2" class="a-5 p-1" href="#"><i style='font-size:24px' class='fas'>&#xf00a;</i></a>
                 </div>
             </div>
-            <div>
-              <ul class="ol" ng-style="myObj">
-                <li>
-                  <p>amin</p>
-                </li>
-              </ul>
-            </div>
-         
+            
+                <div class="d-flex my-3 page_1">
+                  <div class="p-2 agi flex-grow-1">
+                    <h6>تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</h6>
+                    <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
+                    <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
+                    <p>امروز</p>
+                  </div>
+                  <div class="p-2 item_2">
+                    <img src="../img/a.jpg" alt=" ">
+                  </div>
+                </div>
+                <div class="d-flex my-3 page_1">
+                  <div class="p-2 agi flex-grow-1">
+                    <h6>تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</h6>
+                    <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
+                    <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
+                    <p>امروز</p>
+                  </div>
+                  <div class="p-2 item_2">
+                    <img src="../img/a.jpg" alt=" ">
+                  </div>
+                </div>
+                <div class="d-flex my-3 page_1">
+                  <div class="p-2 agi flex-grow-1">
+                    <h6>تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</h6>
+                    <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
+                    <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
+                    <p>امروز</p>
+                  </div>
+                  <div class="p-2 item_2">
+                    <img src="../img/a.jpg" alt=" ">
+                  </div>
+                </div>
+             
           </div>
         </div>
-      </div> 
+      </div>
       <div class="page d-flex justify-content-center">
         <ul class="pagination rtl">
           <li class="page-item page-p mx-2"><a id="c-1" class="page-link" href="#">صفحه قبل</a></li>

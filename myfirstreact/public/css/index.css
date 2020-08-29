@@ -222,3 +222,27 @@ h4{
   .d-1{
       padding: 8px;
   }
+.page_1{
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 1px grey;
+}
+.item_2{
+    width: 400px;
+    background-color: rgb(109, 140, 165);
+}
+.agi{
+    text-align: right;
+}
+.para-1{
+ 
+}
+.para-2{
+    font-family: Arial, Helvetica, sans-serif;
+ 
+}
+.para-2:hover{
+    background-color: rgb(51, 177, 51);
+    color: white;
+
+}

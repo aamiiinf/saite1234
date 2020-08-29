@@ -1,12 +1,8 @@
 $(document).ready(function(){
     $(".btn1,.btn2, .btn3").click(function(){
       $.get('/worod', function(){
-        $("body").load('worod.html')
+        $('body').load('./html/worod.html');
       });
-    });
-
-    $("#btn2").click(function(){
-      $(".ol").append("<li><h2>1</h2><p>2</p><p>3</p><p>4</p></li>");
     });
 
     $("#btn1").click(function(){
@@ -17,7 +13,8 @@ $(document).ready(function(){
           if (data.msg) {
             alert(data.msg)
           }else{
-            $("body").load('../index.html')
+            alert(data.msg);
+            $("body").load('./darg.html');
           }
         });
     });
