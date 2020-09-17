@@ -10,30 +10,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <script src="/js/app.js"></script>
-</head>
-<script>
+  <script>
   $(document).ready(function(){
-    $(window).load(function(){
-     $(".intro > ul > li").addClass('amin')
+    $(".btn1,.btn2, .btn3").click(function(){
+      $.get('/worod', function(){
+        $('html').load('./worod.html');
+      });
     });
-  });
-  
-  // $(document).ready(function(){
-  //   $("#btn_1").click(function(){
-  //     $(".intro ul li").removeClass("intro2").addClass("intro");
-  //   });
-  
-  
-  //   $("#btn_2").click(function(){
-  //     $(".intro ul li").removeClass("intro").addClass("intro2");
-  //   });
-  // });
-  </script>
+});
+</script>
+</head>
 <body>
     <header class="fixed-top back">
         <div class="d-flex justify-content-between">
-            <div class="">
+            <div class="header-left">
                 <div class="d-flex">
                   <div class="mt1">
                   <a class="btn1" href="#">درج آگهی رایگان</a>
@@ -42,51 +32,67 @@
                   </div>
                   <div class="border-1 py-1">
                     <a class="a-1" href="#">
-                      <img class="w_icon mb-1" src="../img/s.png" />
+                      <img class="w_icon mb-1" src="image/s.png" />
                     </a>
                     <input class="rtl input-1" type="text" placeholder="جستجو">
                   </div>
                 </div>
             </div>
+
             <div class="md_2">  
               <div class="d-flex">
-                <div class="flex-fill mt-2">
-                  <a class="nav-link a1" href="#">
-                    <span>انتخاب شهر</span>
-                    <img class="w_icon mb-1" src="../img/m.png" />
-                  </a>
-                </div>
-                <div class="flex-fill mt-2">
+                <div class="flex-fill dis-w">
                   <a class="nav-link a1" href="#">
                     <span>انتخاب گروه</span>
-                    <img class="w_icon mb-1" src="../img/w.png" />
+                    <img class="w_icon mb-1" src="image/w.png" />
+                  </a>
+                </div>
+                <div class="flex-fill dis-w">
+                  <a class="nav-link a1" href="#">
+                    <span>انتخاب شهر</span>
+                    <img class="w_icon mb-1" src="image/m.png" />
+                  </a>
+                </div>
+                <div class="flex-fill dis-p">
+                  <a class="nav-link a1" href="#">
+                    <span>پنل کاربری</span>
+                    <img class="w_icon mb-1 a1" src="image/p.png" />
                   </a>
                 </div>
               </div>
             </div>
-                <div class="d-1">
-                  <a class="nav-link a1" href="#">
-                    <span>پنل کاربری</span>
-                    <img class="w_icon mb-1 a1" src="../img/p.png" />
-                  </a>
-                </div>
-            <div class="">  
-              <div class="d-flex flex-row-reverse">
-                <div class="flex-fill">
-                  <img id="img1" class="mr-1" src="../img/logo.jpg" />
-                </div>
-                
-              </div>
-            </div>   
+
+              <div>
+                <img id="img1" class="mr-1" src="image/logo.jpg" />
+              </div>  
         </div>
         
         <div class="div-2">
-       
+          <div class="d-flex flex-row-reverse">
+            <div class="dis-h">
+              <a class="nav-link a1" href="#">
+                <i style="font-size:10px;" class="fa">&#xf107;</i>
+                <span>انتخاب گروه</span>
+              </a>
+            </div>
+            <div class="dis-h">
+              <a class="nav-link a1" href="#">
+                <i style="font-size:10px" class="fa">&#xf107;</i>
+                <span>انتخاب شهر</span>
+              </a>
+            </div>
+            <div class="dis-p-2 mr-auto">
+              <a class="nav-link a1" href="#">
+                <img class="w_icon mb-1 a1" src="image/p.png" />
+              </a>
+            </div>
+          </div>
+          </div>
         </div>
     </header>
 
     <main class="main">
-      <div>
+      
         <div class="rtl">
           <div class="fsize">
             <div class="left">
@@ -413,62 +419,259 @@
                   <a id="btn_2" class="a-5 p-1" href="#"><i style='font-size:24px' class='fas'>&#xf00a;</i></a>
                 </div>
             </div>
-            
-                <div class="d-flex my-3 page_1">
-                  <div class="p-2 agi flex-grow-1">
-                    <h6>تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</h6>
-                    <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
+            <div class="page_0">
+              <div class="d-flex page_1">
+                <div class="agi flex-grow-1">
+                  <a href="#">استخدام مدرس زبان گرجی</a>
+                  <p class="para-1">نیازمند مدرس گرجی - استخدام مدرس گرجی در موسسه زبان های خارجی پروان برای اطلاعات بیشتر با ما شماره تماس حاصل فرمایید</p>
+                  <div class="div-l">
                     <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
-                    <p>امروز</p>
                   </div>
-                  <div class="p-2 item_2">
-                    <img src="../img/a.jpg" alt=" ">
+                  <div class="d-flex f-12">
+                    <div>
+                      <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
+                    </div>
+                    <div class="mr-auto f-11">
+                      <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
+                    </div>
                   </div>
                 </div>
-                <div class="d-flex my-3 page_1">
-                  <div class="p-2 agi flex-grow-1">
-                    <h6>تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</h6>
-                    <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
-                    <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
-                    <p>امروز</p>
+                <div class="item_2">
+                  <img src="image/P3.jpg" alt="تصویر لود نشد">
+                </div>
+              </div>
+            </div>
+           
+
+            <div class="page_2_1">
+                  <div class="item_2_1">
+                    <img src="image/P3.jpg" alt="تصویر لود نشد">
                   </div>
-                  <div class="p-2 item_2">
-                    <img src="../img/a.jpg" alt=" ">
+                  <div class="item_2_2">
+                    <a href="#">استخدام مدرس زبان گرجی</a>
+                    <p class="para-1">نیازمند مدرس گرجی - استخدام مدرس گرجی در موسسه زبان های خارجی پروان برای اطلاعات بیشتر با ما شماره تماس حاصل فرمایید</p>
+                    <div class="div-l">
+                      <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
+                    </div>
+                    <div class="d-flex f-12">
+                      <div>
+                        <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
+                      </div>
+                      <div class="mr-auto f-11">
+                        <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
+                      </div>
                   </div>
                 </div>
-                <div class="d-flex my-3 page_1">
-                  <div class="p-2 agi flex-grow-1">
-                    <h6>تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</h6>
-                    <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
+            </div>
+
+
+            <div class="page_0">
+              <div class="d-flex page_1">
+                <div class="agi flex-grow-1">
+                  <a href="#">جانمایی پلاک ثبتی - تهیه نقشه هوایی</a>
+                  <p class="para-1">انجام خدماتی نظیر تهیه نقشه utm ، تفکیک اراضی ، تهیه نقشه هوایی با کادری با سابقه و پایین ترین قیمت ها دارنده ی مهر رسمی کارشناس دادگستری</p>
+                  <div class="div-l">
                     <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
-                    <p>امروز</p>
                   </div>
-                  <div class="p-2 item_2">
-                    <img src="../img/a.jpg" alt=" ">
+                  <div class="d-flex f-12">
+                    <div>
+                      <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
+                    </div>
+                    <div class="mr-auto f-11">
+                      <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
+                    </div>
                   </div>
                 </div>
+                <div class="item_2">
+                  <img src="image/P31.jpg" alt="تصویر لود نشد">
+                </div>
+              </div>
+            </div>
+           
+
+            <div class="page_2_1">
+                  <div class="item_2_1">
+                    <img src="image/P31.jpg" alt="تصویر لود نشد">
+                  </div>
+                  <div class="item_2_2">
+                    <a href="#">جانمایی پلاک ثبتی - تهیه نقشه هوایی</a>
+                    <p class="para-1">انجام خدماتی نظیر تهیه نقشه utm ، تفکیک اراضی ، تهیه نقشه هوایی با کادری با سابقه و پایین ترین قیمت ها دارنده ی مهر رسمی کارشناس دادگستری</p>
+                    <div class="div-l">
+                      <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
+                    </div>
+                    <div class="d-flex f-12">
+                      <div>
+                        <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
+                      </div>
+                      <div class="mr-auto f-11">
+                        <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="page_0">
+              <div class="d-flex page_1">
+                <div class="agi flex-grow-1">
+                  <a href="#">طراحی سایت فول داینامیک ، طراحی سایت و سئو</a>
+                  <p class="para-1">
+                    طراحی سایت فول داینامیک ، طراحی سایت و سئو شرکت طراح نت با بیش از 7 سال تجربه در زمینه: طراحی سایت سئو گوگل طراحی گرافیک و دیجیتال مارکتینگ آماده خد...
+                    
+                    </p>
+                  <div class="div-l">
+                    <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
+                  </div>
+                  <div class="d-flex f-12">
+                    <div>
+                      <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
+                    </div>
+                    <div class="mr-auto f-11">
+                      <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item_2">
+                  <img src="image/P310.jpg" alt="تصویر لود نشد">
+                </div>
+              </div>
+            </div>
+           
+
+            <div class="page_2_1">
+                  <div class="item_2_1">
+                    <img src="image/P310.jpg" alt="تصویر لود نشد">
+                  </div>
+                  <div class="item_2_2">
+                    <a href="#">طراحی سایت فول داینامیک ، طراحی سایت و سئو</a>
+                    <p class="para-1">
+                      طراحی سایت فول داینامیک ، طراحی سایت و سئو شرکت طراح نت با بیش از 7 سال تجربه در زمینه: طراحی سایت سئو گوگل طراحی گرافیک و دیجیتال مارکتینگ آماده خد...
+                      
+                      </p>
+                    <div class="div-l">
+                      <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
+                    </div>
+                    <div class="d-flex f-12">
+                      <div>
+                        <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
+                      </div>
+                      <div class="mr-auto f-11">
+                        <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="page_0">
+              <div class="d-flex page_1">
+                <div class="agi flex-grow-1">
+                  <a href="#">تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</a>
+                  <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
+                  <div class="div-l">
+                    <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
+                  </div>
+                  <div class="d-flex f-12">
+                    <div>
+                      <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
+                    </div>
+                    <div class="mr-auto f-11">
+                      <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item_2">
+                  <img src="image/a.jpg" alt="تصویر لود نشد">
+                </div>
+              </div>
+            </div>
+           
+
+            <div class="page_2_1">
+                  <div class="item_2_1">
+                    <img src="image/a.jpg" alt="تصویر لود نشد">
+                  </div>
+                  <div class="item_2_2">
+                    <a href="#">تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</a>
+                    <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
+                    <div class="div-l">
+                      <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
+                    </div>
+                    <div class="d-flex f-12">
+                      <div>
+                        <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
+                      </div>
+                      <div class="mr-auto f-11">
+                        <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+               
              
           </div>
         </div>
-      </div>
+      
       <div class="page d-flex justify-content-center">
         <ul class="pagination rtl">
-          <li class="page-item page-p mx-2"><a id="c-1" class="page-link" href="#">صفحه قبل</a></li>
-          <li class="page-item page-p mx-2"><a id="c-1-1" class="page-link" href="#">قبل</a></li>
+          <li class="page-item page-p"><a id="c-1-1" class="page-link" href="#">قبل</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">1</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">2</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">3</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">4</a></li>
           <li class="page-item page-p"><a id="c-2" class="page-link" href="#">5</a></li>
-          <li class="page-item page-p mx-2"><a id="c-1" class="page-link" href="#">صفحه بعد</a></li>
-          <li class="page-item page-p mx-2"><a id="c-1-1" class="page-link" href="#">بعد</a></li>
+          <li class="page-item page-p"><a id="c-1-1" class="page-link" href="#">بعد</a></li>
         </ul>
       </div>
     </main>
     
     <footer>
-      <div class="footer rtl">
-        <p>مسئولیت آگهی ها بر عهده آگهی دهندگان می باشد. فعالیت های این سایت تابع قوانین و مقررات جمهوری اسلامی ایران است.</p>
+      <div class="footer">
+        <div class="d-flex">
+          <div class="">
+            <div class="d-flex">
+              <div>
+                  <img src="image/logo2.png" alt="">
+              </div>
+              <div>
+                  <img class="el" src="image/el.jpg" alt="">
+              </div>
+            </div>
+            
+          </div>
+          <div class="ml-auto">
+            <ul class="ul-1">
+              <li>درباره ما</li>
+              <li>تماس با ما</li>
+              <li>حفظ حریم شخصی</li>
+            </ul>
+          </div>
+          <div class="ml-auto">
+            <ul class="ul-2">
+              <li>تعرفه سرویس ها</li>
+              <li>قوانین درج آگهی</li>
+              <li>راهنمای سایت</li>
+            </ul>
+          </div>
+          <div class="ml-auto">
+            <ul class="ul-3">
+              <li>
+                <table>
+                  <td><span>کانال رسمی نیاز روز</span></td>
+                  <td><i style='font-size:20px;color: rgb(97, 189, 231);padding-top: 5px;' class='fab'>&#xf3fe;</i></td>
+                </table>
+                
+              </li>
+              <li>
+                <table class="margin-t">
+                  <td><span>درج آگهی رایگان</span></td>
+                  <td><i style='font-size:20px;color: rgb(252, 197, 46);padding-top: 5px;' class='fas'>&#xf067;</i></td>
+                </table>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        
       </div>
      
     </footer>

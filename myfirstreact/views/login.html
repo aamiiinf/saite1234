@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Niaz Rooz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script>
+  $(document).ready(function(){
+    $("#btn11").click(function(){
+        $.post('/login', {
+            password : $("#password").val(),
+            username : $("#username").val()
+        },function(data){
+          if (data.msg) {
+            alert(data.msg)
+          }else{
+
+          }
+        });
+    });
+});
+  </script>
+</head>
+<body>
+    <header class="fixed-top back">
+        <div class="d-flex justify-content-between">
+            <div class="header-left">
+                <div class="d-flex">
+                  <div class="mt1">
+                  <a class="btn1" href="#">درج آگهی رایگان</a>
+                  <a class="btn2" href="#">آگهی رایگان</a>
+                  <a class="btn3" href="#"><i style='font-size:24px' class='fas'>&#xf067;</i></a>
+                  </div>
+                  <div class="border-1 py-1">
+                    <a class="a-1" href="#">
+                      <img class="w_icon mb-1" src="../image/s.png" />
+                    </a>
+                    <input class="rtl input-1" type="text" placeholder="جستجو">
+                  </div>
+                </div>
+            </div>
+
+            <div class="md_2">  
+              <div class="d-flex">
+                <div class="flex-fill dis-w">
+                  <a class="nav-link a1" href="#">
+                    <span>انتخاب گروه</span>
+                    <img class="w_icon mb-1" src="../image/w.png" />
+                  </a>
+                </div>
+                <div class="flex-fill dis-w">
+                  <a class="nav-link a1" href="#">
+                    <span>انتخاب شهر</span>
+                    <img class="w_icon mb-1" src="../image/m.png" />
+                  </a>
+                </div>
+                <div class="flex-fill dis-p">
+                  <a class="nav-link a1" href="#">
+                    <span>پنل کاربری</span>
+                    <img class="w_icon mb-1 a1" src="../image/p.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+              <div>
+                <img id="img1" class="mr-1" src="../image/logo.jpg" />
+              </div>  
+        </div>
+        
+        <div class="div-2">
+          <div class="d-flex flex-row-reverse">
+            <div class="dis-h">
+              <a class="nav-link a1" href="#">
+                <i style="font-size:10px;" class="fa">&#xf107;</i>
+                <span>انتخاب گروه</span>
+              </a>
+            </div>
+            <div class="dis-h">
+              <a class="nav-link a1" href="#">
+                <i style="font-size:10px" class="fa">&#xf107;</i>
+                <span>انتخاب شهر</span>
+              </a>
+            </div>
+            <div class="dis-p-2 mr-auto">
+              <a class="nav-link a1" href="#">
+                <img class="w_icon mb-1 a1" src="../image/p.png" />
+              </a>
+            </div>
+          </div>
+          </div>
+        </div>
+    </header>
+
+    <main class="main">
+      
+        <div class="rtl">
+          <div class="fsize-1">
+           
+          </div>
+          
+            
+             <div style="font-family: Arial, Helvetica, sans-serif" class="container">
+                <div>
+                  <h3 style="text-align: center;">ورود کاربران</h3>
+                  <div style="text-align: center;">
+                    <input class="my-2 mt-5" type="text" placeholder="ایمیل"><br/>
+                    <input class="my-2" type="password" placeholder="رمز ورود"><br/>
+                    <button class="my-2 mb-5 btn btn-info">ارسال</button><br/>
+                    <a href="/views/worod.html">ثبت نام</a>
+                  </div>
+                  
+                  </div>
+                  
+                </div>
+             </div>
+             
+          </div>
+        </div>
+      
+  
+    </main>
+    
+    <footer>
+      <footer>
+        <div class="footer">
+          <div class="d-flex">
+            <div class="">
+              <div class="d-flex">
+                <div>
+                    <img src="image/logo2.png" alt="">
+                </div>
+                <div>
+                    <img class="el" src="image/el.jpg" alt="">
+                </div>
+              </div>
+              
+            </div>
+            <div class="ml-auto">
+              <ul class="ul-1">
+                <li>درباره ما</li>
+                <li>تماس با ما</li>
+                <li>حفظ حریم شخصی</li>
+              </ul>
+            </div>
+            <div class="ml-auto">
+              <ul class="ul-2">
+                <li>تعرفه سرویس ها</li>
+                <li>قوانین درج آگهی</li>
+                <li>راهنمای سایت</li>
+              </ul>
+            </div>
+            <div class="ml-auto">
+              <ul class="ul-3">
+                <li>
+                  <table>
+                    <td><span>کانال رسمی نیاز روز</span></td>
+                    <td><i style='font-size:20px;color: rgb(97, 189, 231);padding-top: 5px;' class='fab'>&#xf3fe;</i></td>
+                  </table>
+                  
+                </li>
+                <li>
+                  <table class="margin-t">
+                    <td><span>درج آگهی رایگان</span></td>
+                    <td><i style='font-size:20px;color: rgb(252, 197, 46);padding-top: 5px;' class='fas'>&#xf067;</i></td>
+                  </table>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          
+        </div>
+       
+      </footer>
+     
+    </footer>
+
+</body>
+</html>
