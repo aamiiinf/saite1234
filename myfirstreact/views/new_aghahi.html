@@ -10,15 +10,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
   <script>
   $(document).ready(function(){
-    $("#btn11").click(function(){
-        $.post('/login', {
-            password : $("#password").val(),
-            username : $("#username").val()
+    $("#btn-22").click(function(){
+        $.post('/darg', {
+            mozo : $("#inp").val(),
+            matn : $("#txt").val()
         },function(data){
-          if (data.msg) {
-            alert(data.msg)
+          if (data) {
+            $('#p_2').html(data);
           }else{
 
           }
@@ -27,7 +28,7 @@
 });
   </script>
 </head>
-<body>
+<body ng-app="">
     <header class="fixed-top back">
         <div class="d-flex justify-content-between">
             <div class="header-left">
@@ -109,10 +110,13 @@
              <div style="font-family: Arial, Helvetica, sans-serif" class="container">
                 <div>
                   <h3 style="text-align: center;">درج آگهی رایگان</h3>
+                  <p id="p_2" style="color: red;text-align: center;"></p>
                   <div style="text-align: center;">
-                    <input class="my-2 mt-5" type="text" placeholder="موضوع آگهی"><br/>
-                    <textarea placeholder="متن آگهی"></textarea><br/>
-                    <button class="my-2 mb-5 btn btn-info">ارسال آگهی</button><br/>
+                  <form name="myForm">
+                    <input id="inp" ng-model="myInput_11" class="my-2 mt-5" type="text" placeholder="موضوع آگهی"><br/>
+                    <textarea id="txt" ng-model="myInput_12" placeholder="متن آگهی"></textarea><br/>
+                  </form>
+                    <button id="btn-22" class="my-2 mb-5 btn btn-info">ارسال آگهی</button><br/>
                   </div>
                   
                   </div>

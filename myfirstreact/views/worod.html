@@ -10,15 +10,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
   <script>
   $(document).ready(function(){
-    $("#btn11").click(function(){
-        $.post('/login', {
-            password : $("#password").val(),
-            username : $("#username").val()
+    $("#btn-1").click(function(){
+        $.post('/worod-p', {
+            email : $("#input-1").val(),
+            name : $("#input-2").val(),
+            password : $("#input-3").val(),
+            password_2 : $("#input-4").val(),
+            mobil : $("#input-5").val(),
+            shahr : $("#input-6").val(),
+            jensiat : $("#input-7").val(),
+            tavalod : $("#input-8").val()
         },function(data){
-          if (data.msg) {
-            alert(data.msg)
+          if (data) {
+            $('#p_1').html(data);
           }else{
 
           }
@@ -27,7 +34,7 @@
 });
   </script>
 </head>
-<body>
+<body ng-app="">
     <header class="fixed-top back">
         <div class="d-flex justify-content-between">
             <div class="header-left">
@@ -109,16 +116,19 @@
              <div style="font-family: Arial, Helvetica, sans-serif" class="container">
                 <div>
                   <h3 style="text-align: center;">ثبت نام کاربران</h3>
+                  <p id="p_1" style="text-align: center;color: red;"></p>
                   <div style="text-align: center;">
-                    <input class="my-2 mt-5" type="text" placeholder="ایمیل"><br/>
-                    <input class="my-2" type="text" placeholder="نام و نام خانوادگی"><br/>
-                    <input class="my-2" type="password" placeholder="رمز ورود"><br/>
-                    <input class="my-2" type="password" placeholder="تکرار رمز ورود"><br/>
-                    <input class="my-2" type="tel" placeholder="شماره موبایل"><br/>
-                    <input class="my-2" type="text" placeholder="شهر"><br/>
-                    <input class="my-2" type="text" placeholder="جنسیت"><br/>
-                    <input class="my-2" type="text" placeholder="تاریخ تولد"><br/>
-                    <button class="my-2 mb-5 btn btn-info">ارسال</button><br/>
+                    <form name="myForm">
+                    <input ng-model="myInput_1" required id="input-1" class="my-2 mt-5" type="email" placeholder="ایمیل"><br/>
+                    <input ng-model="myInput_2" required id="input-2" class="my-2" type="text" placeholder="نام و نام خانوادگی"><br/>
+                    <input ng-model="myInput_3" required id="input-3" class="my-2" type="password" placeholder="رمز ورود"><br/>
+                    <input ng-model="myInput_4" required id="input-4" class="my-2" type="password" placeholder="تکرار رمز ورود"><br/>
+                    <input ng-model="myInput_5" required id="input-5" class="my-2" type="tel" placeholder="شماره موبایل"><br/>
+                    <input ng-model="myInput_6" required id="input-6" class="my-2" type="text" placeholder="شهر"><br/>
+                    <input ng-model="myInput_7" required id="input-7" class="my-2" type="text" placeholder="جنسیت"><br/>
+                    <input ng-model="myInput_8" required id="input-8" class="my-2" type="text" placeholder="تاریخ تولد"><br/>
+                    <button id="btn-1" class="my-2 mb-5 btn btn-info">ارسال</button><br/>
+                  </form>
                     <a href="/views/login.html">قبلا ثبت نام کردید؟</a>
                   </div>
                   

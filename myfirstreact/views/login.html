@@ -10,24 +10,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
   <script>
   $(document).ready(function(){
-    $("#btn11").click(function(){
-        $.post('/login', {
-            password : $("#password").val(),
-            username : $("#username").val()
+    $("#btn-2").click(function(){
+        $.post('/login-2', {
+            email : $("#in_1").val(),
+            password : $("#in_2").val()
         },function(data){
-          if (data.msg) {
-            alert(data.msg)
+          if (data) {
+            $('#p_2').html(data);
           }else{
-
+           
           }
         });
     });
 });
   </script>
 </head>
-<body>
+<body ng-app="">
     <header class="fixed-top back">
         <div class="d-flex justify-content-between">
             <div class="header-left">
@@ -109,10 +110,13 @@
              <div style="font-family: Arial, Helvetica, sans-serif" class="container">
                 <div>
                   <h3 style="text-align: center;">ورود کاربران</h3>
+                  <p id="p_2" style="color: red;text-align: center;"></p>
                   <div style="text-align: center;">
-                    <input class="my-2 mt-5" type="text" placeholder="ایمیل"><br/>
-                    <input class="my-2" type="password" placeholder="رمز ورود"><br/>
-                    <button class="my-2 mb-5 btn btn-info">ارسال</button><br/>
+                  <form name="myForm">
+                    <input id="in_1" ng-model="myInput_1_1" required class="my-2 mt-5" type="email" placeholder="ایمیل"><br/>
+                    <input id="in_2" ng-model="myInput_1_2" required class="my-2" type="password" placeholder="رمز ورود"><br/>
+                  </form>
+                    <button id="btn-2" class="my-2 mb-5 btn btn-info">ارسال</button><br/>
                     <a href="/views/worod.html">ثبت نام</a>
                   </div>
                   
