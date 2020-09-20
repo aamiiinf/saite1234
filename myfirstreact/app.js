@@ -28,6 +28,13 @@ var oneSchema = new Schema2({
 }) ;
 var OneModel = mongoose.model("One" , oneSchema ) ;
 
+const Schema3 = mongoose.Schema;
+var oneSchema2 = new Schema3({
+   mozo : String ,
+   matn : String
+}) ;
+var InputModel_2 = mongoose.model("One-2" , oneSchema2 ) ;
+
 app.set('views', path.join(__dirname, '/views'));
 // app.set('view engine', 'html');
 app.use(morgan('common')) ;
@@ -169,7 +176,7 @@ app.post('/darg', function (req, res, next) {
     res.send('لطفا همه موارد را کامل کنید');
   }
 });
-app.post('/new-1', function(req, res) {
+app.get('/new-1', function(req, res) {
   OneModel.find({}, function(err, result) {
     if (err) {
       res.send(err);
@@ -178,6 +185,36 @@ app.post('/new-1', function(req, res) {
       console.log(result)
     }
   });
+});
+app.get('/new-2', function(req, res) {
+  OneModel.find({}, function(err, result) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+      console.log(result)
+    }
+  });
+});
+app.post('/taeid', function(req, res){
+  console.log(req.body);
+  var formData_4 = req.body;
+  var mozo = formData_4.mozo;
+  var matn = formData_4.matn;
+  if(mozo.length && matn.length){
+    InputModel_2.find({mozo , matn}, function (err, docs) {
+      if(docs.length){
+        res.send('خوش آمدید')
+      }else{
+          res.send('متن یا موضوع تکراری است')
+      }
+    })
+     
+  }else{
+    res.send('لطفا متن و موضوع را وارد کنید');
+  }
+  
+
 });
 
 app.listen(3000);

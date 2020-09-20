@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script>
   $(document).ready(function(){
     $(".btn1,.btn2, .btn3").click(function(){
@@ -18,6 +19,15 @@
       });
     });
 });
+</script>
+<script>
+  var app = angular.module("myShoppingList", []); 
+  app.controller("myCtrl", function($scope, $http) {
+      $http.get("/new-2") 
+      .then(function(response) {
+          $scope.aghahi = response.data;
+      });
+  });
 </script>
 </head>
 <body>
@@ -411,7 +421,7 @@
               </div>
             </div>
           </div>
-          <div class="right">
+          <div class="right" div ng-app="myShoppingList" ng-controller="myCtrl">
             <div class="clearfix">
                 <h4 class="float-right">نیازمندیها ، آگهی و تبلیغات اینترنتی</h4>
                 <div class="float-left">
@@ -420,10 +430,10 @@
                 </div>
             </div>
             <div class="page_0">
-              <div class="d-flex page_1">
+              <div class="d-flex page_1" ng-repeat="x in aghahi">
                 <div class="agi flex-grow-1">
-                  <a href="#">استخدام مدرس زبان گرجی</a>
-                  <p class="para-1">نیازمند مدرس گرجی - استخدام مدرس گرجی در موسسه زبان های خارجی پروان برای اطلاعات بیشتر با ما شماره تماس حاصل فرمایید</p>
+                  <a href="#">{{x.mozo}}</a>
+                  <p class="para-1">{{x.matn}}</p>
                   <div class="div-l">
                     <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
                   </div>
@@ -463,151 +473,7 @@
                   </div>
                 </div>
             </div>
-
-
-            <div class="page_0">
-              <div class="d-flex page_1">
-                <div class="agi flex-grow-1">
-                  <a href="#">جانمایی پلاک ثبتی - تهیه نقشه هوایی</a>
-                  <p class="para-1">انجام خدماتی نظیر تهیه نقشه utm ، تفکیک اراضی ، تهیه نقشه هوایی با کادری با سابقه و پایین ترین قیمت ها دارنده ی مهر رسمی کارشناس دادگستری</p>
-                  <div class="div-l">
-                    <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
-                  </div>
-                  <div class="d-flex f-12">
-                    <div>
-                      <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
-                    </div>
-                    <div class="mr-auto f-11">
-                      <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item_2">
-                  <img src="image/P31.jpg" alt="تصویر لود نشد">
-                </div>
-              </div>
-            </div>
-           
-
-            <div class="page_2_1">
-                  <div class="item_2_1">
-                    <img src="image/P31.jpg" alt="تصویر لود نشد">
-                  </div>
-                  <div class="item_2_2">
-                    <a href="#">جانمایی پلاک ثبتی - تهیه نقشه هوایی</a>
-                    <p class="para-1">انجام خدماتی نظیر تهیه نقشه utm ، تفکیک اراضی ، تهیه نقشه هوایی با کادری با سابقه و پایین ترین قیمت ها دارنده ی مهر رسمی کارشناس دادگستری</p>
-                    <div class="div-l">
-                      <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
-                    </div>
-                    <div class="d-flex f-12">
-                      <div>
-                        <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
-                      </div>
-                      <div class="mr-auto f-11">
-                        <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
-                      </div>
-                  </div>
-                </div>
-            </div>
-
-
-            <div class="page_0">
-              <div class="d-flex page_1">
-                <div class="agi flex-grow-1">
-                  <a href="#">طراحی سایت فول داینامیک ، طراحی سایت و سئو</a>
-                  <p class="para-1">
-                    طراحی سایت فول داینامیک ، طراحی سایت و سئو شرکت طراح نت با بیش از 7 سال تجربه در زمینه: طراحی سایت سئو گوگل طراحی گرافیک و دیجیتال مارکتینگ آماده خد...
-                    
-                    </p>
-                  <div class="div-l">
-                    <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
-                  </div>
-                  <div class="d-flex f-12">
-                    <div>
-                      <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
-                    </div>
-                    <div class="mr-auto f-11">
-                      <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item_2">
-                  <img src="image/P310.jpg" alt="تصویر لود نشد">
-                </div>
-              </div>
-            </div>
-           
-
-            <div class="page_2_1">
-                  <div class="item_2_1">
-                    <img src="image/P310.jpg" alt="تصویر لود نشد">
-                  </div>
-                  <div class="item_2_2">
-                    <a href="#">طراحی سایت فول داینامیک ، طراحی سایت و سئو</a>
-                    <p class="para-1">
-                      طراحی سایت فول داینامیک ، طراحی سایت و سئو شرکت طراح نت با بیش از 7 سال تجربه در زمینه: طراحی سایت سئو گوگل طراحی گرافیک و دیجیتال مارکتینگ آماده خد...
-                      
-                      </p>
-                    <div class="div-l">
-                      <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
-                    </div>
-                    <div class="d-flex f-12">
-                      <div>
-                        <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
-                      </div>
-                      <div class="mr-auto f-11">
-                        <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
-                      </div>
-                  </div>
-                </div>
-            </div>
-
-            <div class="page_0">
-              <div class="d-flex page_1">
-                <div class="agi flex-grow-1">
-                  <a href="#">تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</a>
-                  <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
-                  <div class="div-l">
-                    <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
-                  </div>
-                  <div class="d-flex f-12">
-                    <div>
-                      <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
-                    </div>
-                    <div class="mr-auto f-11">
-                      <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item_2">
-                  <img src="image/a.jpg" alt="تصویر لود نشد">
-                </div>
-              </div>
-            </div>
-           
-
-            <div class="page_2_1">
-                  <div class="item_2_1">
-                    <img src="image/a.jpg" alt="تصویر لود نشد">
-                  </div>
-                  <div class="item_2_2">
-                    <a href="#">تعمیرات یخچال فریزر و ساید بای ساید در فیروزکوه</a>
-                    <p class="para-1">Digital Forge Gauges نیرو سنج 475040 قابلیت اندازه گیری در دو حالت فشار و کشش رنج49newton/5kg حداکثر اندازه گیری 10 کیلو گرم واحد اندازه گیریkg/newton ...</p>
-                    <div class="div-l">
-                      <p class="para-2">اطلاعات تماس و جزییات بیشتر</p>
-                    </div>
-                    <div class="d-flex f-12">
-                      <div>
-                        <i>امروز ۱۳:۰۶|بندر انزلی|امین چوب کاسپین</i>
-                      </div>
-                      <div class="mr-auto f-11">
-                        <a href="#" style='font-size:15px;color:gold'><i class='fas fa-star'></i></a>
-                      </div>
-                  </div>
-                </div>
-            </div>
-               
-             
+                        
           </div>
         </div>
       
